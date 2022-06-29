@@ -1,6 +1,7 @@
 body{
-    background-color: black;
-    color: grey;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(85, 111, 228));
+    color: black;
+    font-weight: bolder;
 }
 
 img{
@@ -20,11 +21,25 @@ table , th{
 }
 table{
     width: 90vw;
-    background-color: black;
+   
 
 }
 button{
     margin-right: 20px;
     background-color: transparent;
     color: white;
+    
 }
+.fa-solid {
+    
+    transition-duration: 0.4s;
+    font-size: 20px;
+}
+
+  
+.fa-solid:hover {
+    background-color: green; /* Green */
+    color: white;
+  }
+
+  button{    border: none !important;}

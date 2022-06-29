@@ -3,14 +3,26 @@
     padding: 0;
     box-sizing: border-box;
   }
+  body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(85, 111, 228));
+  }
 #home{
- background:   url(./PROPERTY_BG.jpg);
+     background:   url(/homepage.jpg);
     background-size: cover;
     object-fit: cover;
     height:80vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
+}
+.hometext{
+    color: rgb(85, 111, 228);
+    margin-bottom:0px  !important;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-weight: bolder;
+    text-shadow: 2px 4px 3px #ffffff;
+    font-size: 60px !important;
+   
 }
 #navbar{
     display: flex;
@@ -28,7 +40,8 @@ form{
     width: 60vw;
     position: absolute;
     bottom: 50px;
-    box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 15%);
+    box-shadow: 0px 20px 40px 0px rgba(11, 10, 10, 0.91);
+    
 }
 .filters{
     padding-left: 1%;
@@ -56,6 +69,13 @@ select , option{
 h1{
     display: flex;
     justify-content: center;
+    padding-top: 80px;
+    color: rgb(10, 54, 249) !important;
+    padding-bottom: 20px ;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-weight: bolder !important;
+    text-shadow: 2px 4px 6px #fbf8f8;
+    font-size: 30px !important;
 }
 #listingcards{
     background-color:rgba(231, 227, 228, 0.858);
@@ -84,6 +104,10 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: rgb(85, 111, 228);
+
+   background-color: white;
+    
 
 }
 .hello{
@@ -101,4 +125,10 @@ input{
 span{
     padding-left: 10px;
     font-size: 15px;
+    color: rgb(85, 111, 228);
+    padding-bottom: 20px ;
+    font-family: Copperplate, Papyrus, fantasy !important;
+    font-weight: bolder;
+    text-shadow: 2px 4px 3px #ffffff;
+    
   }

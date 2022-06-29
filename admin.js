@@ -1,6 +1,6 @@
 let listings = JSON.parse(localStorage.getItem("listings"))
 ? JSON.parse(localStorage.getItem("listings")):[
-    {image: 'https://picsum.photos/200/300/?blur',
+    {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/apartment1%20(1).jpg',
     id:1,
      title:'Light and Modern Apartment',
      price: '$4500/mo',
@@ -14,7 +14,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
      datePosted:'04/04/2020',
      yearBuilt:'2016',
     },
-    {image:'https://picsum.photos/200/300/?blur',
+    {image:'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/apartment1%20(2).jpg',
     id:2,
     title:'Cute Apartment',
     price: '$4500/mo',
@@ -28,7 +28,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
     datePosted:'04/04/2020',
     yearBuilt:'2016',
    },
-   {image: 'https://picsum.photos/200/300/?blur',
+   {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/apartment1%20(3).jpg',
    id:3,
    title:'Cozy Apartment',
    price: '$4500/mo',
@@ -42,7 +42,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
    datePosted:'04/04/2020',
    yearBuilt:'2016',
   },
-  {image: 'https://picsum.photos/200/300/?blur',
+  {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/apartment1%20(4).jpg',
   id:4,
   title:'Newly Built Apartment',
   price: '$4500/mo',
@@ -56,7 +56,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
   datePosted:'04/04/2020',
   yearBuilt:'2016',
  },
- {image: 'https://picsum.photos/200/300/?blur',
+ {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/apartment1%20(5).jpg',
      id:5,
  title:'Fully Furnished Apartment',
  price: '$4500/mo',
@@ -70,7 +70,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
  datePosted:'04/04/2020',
  yearBuilt:'2016',
 },
-{image: 'https://picsum.photos/200/300/?blur',
+{image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/house1%20(1).jpg',
     id:6,
      title:'North Facing listing',
      price: '$4500/mo',
@@ -84,7 +84,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
      datePosted:'04/04/2020',
      yearBuilt:'2016',
     },
-    {image: 'https://picsum.photos/200/300/?blur',
+    {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/house1%20(2).jpg',
         id:7,
     title:'Newly Built listing',
     price: '$4500/mo',
@@ -98,7 +98,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
     datePosted:'04/04/2020',
     yearBuilt:'2016',
    },
-   {image: 'https://picsum.photos/200/300/?blur',
+   {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/studio%20(1).jpg',
        id:8,
    title:'Grand Mansion',
    price: '$4500/mo',
@@ -112,7 +112,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
    datePosted:'04/04/2020',
    yearBuilt:'2016',
   },
-  {image: 'https://picsum.photos/200/300/?blur',
+  {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/studio%20(2).jpg',
   id:9,
   title:'Bachelor Pad',
   price: '$4500/mo',
@@ -126,7 +126,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
   datePosted:'04/04/2020',
   yearBuilt:'2016',
  },
- {image: 'https://picsum.photos/200/300/?blur',
+ {image: 'https://raw.githubusercontent.com/leandremoritz/JSproject/main/images/studio%20(3).jpg',
  id:10,
  title:'Pentlisting Open Floor',
  price: '$4500/mo',
@@ -170,7 +170,9 @@ function ShowlistingListings (listings) {
       //Goes through the array and filters out every id that is equal to the selected one
       return listing.id !== id; //Returns all objects in the array that is not the same id as the selected one
     });
-    // addToStorage(objectives); // Adds to local storage
+    localStorage.setItem("listings", JSON.stringify(listings));
+
+
     ShowlistingListings(listings); //Displays the array
   }
 
@@ -178,7 +180,7 @@ function ShowlistingListings (listings) {
     let listing = listings.find((listing) => listing.id === id); //Finds the id of button that was clicked
     let input = prompt("Input Changes"); //Allows the user to input their own changes
     listing.title = input; //Changes the content to what the user's input
-    // addToStorage(objectives); //Adds to local storage
+    localStorage.setItem("listings", JSON.stringify(listings));
     ShowlistingListings(listings); //Displays the array
   }
  
