@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    color: grey;
+}
+
+img{
+    width: 80px;
+    height: 60px;
+}
+td{
+    padding-left: 1%;
+    width: 30px;
+    padding-right: 1%;
+
+   
+    
+}
+table , th{
+    border: 3px solid white;
+}
+table{
+    width: 90vw;
+    background-color: black;
+
+}
+button{
+    margin-right: 20px;
+    background-color: transparent;
+    color: white;
+}

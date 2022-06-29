@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+#home{
+ background:   url(./PROPERTY_BG.jpg);
+    background-size: cover;
+    object-fit: cover;
+    height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+li {
+    list-style-type: none;
+    }
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: row !important;
+}
+#form1{
+    width: 60vw;
+    position: absolute;
+    bottom: 50px;
+    box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 15%);
+}
+.filters{
+    padding-left: 1%;
+    padding-bottom: 3%;
+}
+select , option{
+    width: 13.5vw;
+    height: 5vh;
+    border-color: white;
+    background-color: rgb(222, 220, 220);
+    border: 2px solid rgb(222, 220, 220);
+    border-radius: 25px;
+}
+.form-label {
+    font-weight: bold;
+}
+#listingbox{
+    margin-top:5%;
+}
+#properties{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+#listingcards{
+    background-color:rgba(231, 227, 228, 0.858);
+    width:400px;
+    padding:10px;
+    margin:5px;
+}
+#listing-values{
+ display:flex;
+}
+li{
+    margin-left: 4%;
+    list-style: none;
+}
+img{
+    width: 380px;
+    height: 250px;
+}
+ 
+#contact{
+    background-color: #dce1df;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.hello{
+
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+}
+input{
+    padding-bottom: 5%;
+}
+#contact{
+    height: 40vh;
+}
+span{
+    padding-left: 10px;
+    font-size: 15px;
+  }
