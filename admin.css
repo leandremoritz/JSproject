@@ -8,13 +8,15 @@ body{
     display: flex;
     
 }
-.btn{
+#addbtn{
     display: flex;
     justify-content: end;
     right: 0;
     position: absolute;
-    top: 0;
-}
+    top: 180px;
+    right:10px ;
+    border-radius: 0;
+} 
 
 select{
     padding-right: 20px;
@@ -63,7 +65,7 @@ button{
 
   button{    border: none !important;}
 
-  form{
+  #form1{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
@@ -76,5 +78,17 @@ button{
     font-weight: bold;
     
   }
+  h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    color: rgb(10, 54, 249) !important;
+    padding-bottom: 20px ;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-weight: bolder !important;
+    text-shadow: 2px 4px 6px #fbf8f8;
+    font-size: 50px !important;
+    font-weight: bolder;
+}
 
   
