@@ -6,8 +6,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" href="admin.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+    <!-- filter -->
+    
+        <form id="form1">
+            <div class="filters">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <div>
+                  <select name="budgets" id="select1" onchange="typeHouse()" placeholder="Max Price">
+                      <option value="Budget">Looking for..</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="House">Family House</option>
+                      <option value="Studio">Studio</option>
+                    </select>
+          </div>
+        </div>
+          
+          <div class="filters">
+              <label for="exampleInputEmail1"  class="form-label"></label>
+              <div>
+                  <select name="budgets" id="select2" onchange="addressHouse()" placeholder="Max Price">
+                      <option value="All">All Cities</option>
+                      <option value="Chicago">Chicago</option>
+                      <option value="Los Angeles">Los Angeles</option>
+                      <option value="Miami">Miami</option>
+                      <option value="New York">New York</option>
+                    </select>
+          </div>
+      </div>
+      <div class="filters">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <div>
+                  <select name="budgets" id="select3" onchange="bedroomsHouse()" placeholder="Max Price">
+                      <option value="Budget">Bedrooms</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+          </div>
+      </div>
+      <div class="filters">
+        <div class="filters">
+          <label for="budgets" class="form-label"></label>
+          <div>
+              <select name="budgets" id="budgets" onchange="sortListings()" placeholder="Price">
+                  <option value="Bt">Price </option>
+                  <option value="Budget">Price (Des)</option>
+                 
+                </select>
+      </div>
+  </div>
+       </form>
+
+       <div class="addlisting">
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Create a listing
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Please provide details of the property
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form onsubmit="event.preventDefault(); addListing()">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Title"
+                      placeholder="Name of property"
+                    />
+                    <label for="Title">Property Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Location">
+                      <option selected>Select the location</option>
+                      <option value="Chicago">Chicago</option>
+                      <option value="Los Angeles">
+                        Los Angeles
+                      </option>
+                      <option value="Miami">Miami</option>
+                      <option value="New York">New York</option>
+                    </select>
+                    <label for="Location">Location</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Image"
+                      placeholder="Image of property"
+                    />
+                    <label for="Image">Property Image</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Type">
+                      <option selected>Select the type of property</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="Family Home">Family Home</option>
+                      <option value="Studio">Studio</option>
+                    </select>
+                    <label for="ype">Type Of property</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Bedrooms">
+                      <option selected>Select the number of bedrooms</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label for="Bedrooms">Number of Bedrooms</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Bathrooms">
+                      <option selected>Select the number of bathrooms</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <label for="Bathrooms">Number of bathrooms</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Garage">
+                      <option selected>Select the number of garages</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <label for="Garage">Number of Garages</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Size"
+                      placeholder="Size"
+                    />
+                    <label for="Size">Size</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="Price"
+                      placeholder="Price"
+                    />
+                    <label for="Price">Price</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="Status">
+                      <option selected>Select the listing</option>
+                      <option value="Rent">For Rent</option>
+                      <option value="Sale">For Sale</option>
+                    </select>
+                    <label for="Status">Listing Status</label>
+                  </div>
+                  <button type="submit" class="submit btn btn-dark">ADD</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+       
+      </div>
     <div id="displayListings">
         <table class="table">
           <thead>
@@ -31,7 +228,9 @@
       </div>
 
     <!-- scripts -->
+
     <script src="admin.js"></script>
     <script src="https://kit.fontawesome.com/28c2fb0c61.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

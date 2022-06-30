@@ -3,6 +3,25 @@ body{
     color: black;
     font-weight: bolder;
 }
+#form1{ 
+    background-color: transparent;
+    display: flex;
+    
+}
+.btn{
+    display: flex;
+    justify-content: end;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+select{
+    padding-right: 20px;
+  border:none;
+}
+
+
 
 img{
     width: 80px;
@@ -43,3 +62,19 @@ button{
   }
 
   button{    border: none !important;}
+
+  form{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    font-weight: bolder;
+
+   
+  }
+  select{
+    font-weight: bold;
+    
+  }
+
+  
